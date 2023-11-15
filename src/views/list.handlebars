@@ -1,0 +1,10 @@
+<div>
+    {{#each breeds}}
+    <div>
+        <a href="/characters/{{this.name}}">
+            <b>{{this.name}}</b>
+            <img src="{{this.photo}}">
+        </a>
+    </div>
+    {{/each}}
+</div>
