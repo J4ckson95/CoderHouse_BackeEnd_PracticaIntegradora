@@ -1,7 +1,7 @@
 import express from "express"
 import handlebars from "express-handlebars"
 import __dirname from "./utils.js"
-import guildWarRouter from "./router/guildwar.router.js"
+import guildRouter from "./routes/guildwar.router.js"
 
 const app = express()
 //? Configuración del motor de plantillas handlebars
@@ -11,7 +11,7 @@ app.set("view engine", "handlebars")
 
 app.get("/", (req, res) => res.render("index", {}))
 app.get("/health", (req, res) => res.send("ok"))
-app.get("/characters", guildWarRouter)
+app.get("/characters", guildRouter)
 
 
-app.listen(1010, () => console.log("Runing ...<(-_-)>"))
+app.listen(1010, () => console.log("Runing ...<(--_--)>"))
